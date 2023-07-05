@@ -1,0 +1,21 @@
+.candy {
+    display: flex;
+    margin-top: 10px;
+}
+
+.candy-list {
+}
+
+.buy-btn {
+    margin-left: 1rem;
+}
+
+.buy-btn button {
+    background-color: green;
+    margin-left: 10px;
+    padding: 2px;
+    font-size: 15px;
+    font-weight: bold;
+    width: 3.3rem;
+    border-radius: 7px;
+}

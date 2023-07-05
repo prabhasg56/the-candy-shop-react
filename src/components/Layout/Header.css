@@ -1,0 +1,51 @@
+.header-main{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 4rem;
+    background-color: chocolate;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: bold;
+}
+
+.cart {
+    display: flex;
+    justify-content: space-around;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgb(128, 58, 8);
+    width: 4.5rem;
+    margin-left: 15rem;
+    border-radius: 5px;
+}
+
+.cart-value {
+    color: white;
+}
+
+.form {
+    display: flex;
+    margin-top: 1.5rem;
+    position: relative;
+}
+
+.form label{
+    margin-left: 1rem;
+    font-size: 1.2rem;
+}
+
+.form input{
+    margin-left: 1rem;
+    border-radius: 0.4rem;
+    height: 1.5rem;
+}
+
+.add-btn {
+    margin-left: 1.5rem;
+    font-size: 15px;
+    width: 7rem;
+    font-weight: bold;
+    border-radius: 0.8rem;
+    background-color: darkgreen;
+}
