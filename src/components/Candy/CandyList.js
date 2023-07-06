@@ -1,26 +1,36 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./CandyList.css";
+import CartContext from "../Store/cart-context";
 
-let candys = [
-  { name: "Echair", description: "Chocolaty", price: 2 },
-  { name: "Echair1", description: "Chocolaty1", price: 12 },
-  { name: "Echair2", description: "Chocolaty2", price: 22 },
-];
 const CandyList = () => {
+  const cartCtx = useContext(CartContext);
+
   return (
     <div>
       <ul>
-        {candys.map((candy, ind) => {
+        {cartCtx._currentValue.candies.map((candy, ind) => {
           return (
-            <li>
+            <li key={ind}>
               <div className="candy">
                 <div className="candy-list">
-                  {`${candy.name}  ${candy.description}  ${candy.price}`}
+                  {`${candy.candyName}  ${candy.description}  ${candy.price}`}
                 </div>
                 <div className="buy-btn">
-                  <button>Buy1</button>
-                  <button>Buy2</button>
-                  <button>Buy3</button>
+                  <button
+                    onClick={(e) => cartCtx._currentValue.addToCart({...candy, quantity: 1},ind)}
+                  >
+                    Buy1
+                  </button>
+                  <button
+                    onClick={(e) => cartCtx._currentValue.addToCart({...candy, quantity: 2}, ind)}
+                  >
+                    Buy2
+                  </button>
+                  <button
+                    onClick={(e) => cartCtx._currentValue.addToCart({...candy, quantity: 3}, ind)}
+                  >
+                    Buy3
+                  </button>
                 </div>
               </div>
             </li>
